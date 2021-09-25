@@ -1,0 +1,56 @@
+/* ==UserStyle==
+@name           Youtube rounded
+@namespace      https://github.com/Adaoh2/youtube-rounded
+@version        1.0.0
+@description    A more rounded style for Youtube
+@author         Adaoh2
+@updateURL 		  https://raw.githubusercontent.com/Adaoh2/youtube-rounded/main/youtuberounded.user.css
+==/UserStyle== */
+@-moz-document domain("youtube.com") {
+	ytd-thumbnail.ytd-rich-grid-media::before {
+		border-radius: 10px;
+		background-color: var(--yt-spec-10-percent-layer);
+	}
+	img.yt-img-shadow {
+		border-radius: 10px;
+	}
+	#thumbnail.fade-in.ytd-moving-thumbnail-renderer {
+		border-radius: 10px
+	}
+	.html5-video-player {
+		border-radius: 10px;
+	}
+
+	ytd-button-renderer #button.ytd-button-renderer {
+		border-radius: 10px;
+	}
+	tp-yt-paper-button.ytd-subscribe-button-renderer[subscribed] {
+		border-radius: 10px;
+	}
+
+	#content.ytd-rich-item-renderer ytd-post-renderer.ytd-rich-item-renderer,
+	#content.ytd-rich-item-renderer ytd-shared-post-renderer.ytd-rich-item-renderer {
+		border-radius: 10px;
+	}
+	ytd-thumbnail-overlay-time-status-renderer {
+		backdrop-filter: blur(1rem);
+	}
+
+	ytd-rich-grid-media {
+		--yt-button-compact-background-color: var(--yt-spec-10-percent-layer);
+		--yt-button-compact-text-color: var(--yt-spec-text-secondary);
+		background-color: #212121;
+		border-radius: 15px;
+		padding: 10px;
+		transition: all 0.3s ease;
+	}
+	ytd-rich-grid-media:hover {
+		--yt-button-compact-background-color: var(--yt-spec-10-percent-layer);
+		--yt-button-compact-text-color: var(--yt-spec-text-secondary);
+		background-color: #272727;
+		border-radius: 15px;
+		padding: 10px;
+		transition: all 0.3s ease;
+		box-shadow: 0px 0px 20px #101010;
+	}
+}
