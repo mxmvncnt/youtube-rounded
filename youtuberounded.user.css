@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Youtube rounded
 @namespace      https://github.com/Adaoh2/youtube-rounded
-@version        1.0.2
+@version        1.0.4
 @description    A more rounded style for Youtube
 @author         Adaoh2
 @updateURL 		https://raw.githubusercontent.com/Adaoh2/youtube-rounded/main/youtuberounded.user.css
@@ -53,11 +53,18 @@
 		transition: all 0.3s ease;
 		box-shadow: 0px 0px 20px #101010;
 	}
+	
+	#container.ytd-searchbox, #search-icon-legacy.ytd-searchbox {
+		border-radius: 10px;
+		margin-right: 10px;
+	}
+	
 
 	/* TOP BAR BLUR SECTION, REMOVE OR COMMENT WITH /* and */
 	/* IF YOU DO NOT LIKE IT */
 	#container.ytd-masthead,
-	#chips.ytd-feed-filter-chip-bar-renderer, #contentWrapper.tp-yt-iron-dropdown > * {
+	#chips.ytd-feed-filter-chip-bar-renderer,
+	#contentWrapper.tp-yt-iron-dropdown > * {
 		backdrop-filter: blur(20px);
 	}
 
@@ -65,4 +72,5 @@
 	:not(.style-scope)[dark] {
 		--yt-spec-brand-background-primary: rgba(33, 33, 33, 0.8);
 	}
+
 }
