@@ -1,4 +1,4 @@
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/Adaoh2/youtube-rounded/main/youtuberounded.user.css)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://userstyles.world/api/style/1281.user.css)
 # Youtube Rounded 
 A rounded theme for Youtube
 
