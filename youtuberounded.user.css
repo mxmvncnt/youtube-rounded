@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Youtube rounded
 @namespace      https://github.com/Adaoh2/youtube-rounded
-@version        1.2.0
+@version        1.2.1
 @description    A more rounded style for Youtube
 @author         Adaoh2
 @updateURL 		https://userstyles.world/api/style/1281.user.css
@@ -35,7 +35,15 @@
 	#contents.ytd-rich-metadata-row-renderer .ytd-rich-metadata-row-renderer,
 	style-scope ytd-thumbnail,
 	tp-yt-paper-button.ytd-subscribe-button-renderer,
-	yt-confirm-dialog-renderer[dialog][dialog][dialog] {
+	yt-confirm-dialog-renderer[dialog][dialog][dialog],
+	ytd-watch-metadata:not([modern-metapanel]) #owner.ytd-watch-metadata,
+	ytd-comments-entry-point-header-renderer:not([modern-metapanel]),
+	ytd-comments-entry-point-header-renderer:not([modern-metapanel]) #simplebox-input.ytd-comments-entry-point-header-renderer,
+	ytd-engagement-panel-section-list-renderer,
+	.style-scope ytd-watch-metadata,
+	.ytp-inline-preview-mode.ytp-autohide .ytp-inline-preview-scrim-clear,
+	ytd-rich-grid-row,
+	.ytp-inline-preview-scrim.ytp-inline-preview-scrim-clear {
 		border-radius: borderRadius;
 	}
 
@@ -125,23 +133,6 @@
 		else {
 			background-color: #212121;
 		}
-	}
-
-	.ytp-inline-preview-mode.ytp-autohide .ytp-inline-preview-scrim-clear,
-	ytd-rich-grid-row,
-	.ytp-inline-preview-scrim.ytp-inline-preview-scrim-clear {
-		border-radius: borderRadius;
-	}
-
-	.style-scope ytd-watch-metadata {
-		border-radius: borderRadius;
-	}
-
-	ytd-watch-metadata:not([modern-metapanel]) #owner.ytd-watch-metadata,
-	ytd-comments-entry-point-header-renderer:not([modern-metapanel]),
-	ytd-comments-entry-point-header-renderer:not([modern-metapanel]) #simplebox-input.ytd-comments-entry-point-header-renderer,
-	ytd-engagement-panel-section-list-renderer {
-		border-radius: borderRadius;
 	}
 
 	#header.ytd-engagement-panel-title-header-renderer {
