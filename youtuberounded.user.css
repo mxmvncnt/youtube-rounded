@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Youtube rounded
 @namespace      https://github.com/Adaoh2/youtube-rounded
-@version        1.1.0
+@version        1.1.1
 @description    A more rounded style for Youtube
 @author         Adaoh2
 @updateURL 		https://userstyles.world/api/style/1281.user.css
@@ -71,6 +71,7 @@
 	#search-icon-legacy.ytd-searchbox {
 		border-radius: borderRadius;
 		margin-right: 10px;
+		border-right: 1px solid var(--ytd-searchbox-legacy-border-color);
 	}
 
 	#container.ytd-masthead,
