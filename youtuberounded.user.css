@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Youtube rounded
 @namespace      https://github.com/Adaoh2/youtube-rounded
-@version        1.2.1
+@version        1.2.2
 @description    A more rounded style for Youtube
 @author         Adaoh2
 @updateURL 		https://userstyles.world/api/style/1281.user.css
@@ -43,7 +43,9 @@
 	.style-scope ytd-watch-metadata,
 	.ytp-inline-preview-mode.ytp-autohide .ytp-inline-preview-scrim-clear,
 	ytd-rich-grid-row,
-	.ytp-inline-preview-scrim.ytp-inline-preview-scrim-clear {
+	.ytp-inline-preview-scrim.ytp-inline-preview-scrim-clear,
+	ytd-rich-grid-slim-media[is-short] ytd-thumbnail.ytd-rich-grid-slim-media::before,
+	ytd-thumbnail.ytd-rich-grid-slim-media {
 		border-radius: borderRadius;
 	}
 
