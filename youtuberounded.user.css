@@ -1,16 +1,17 @@
 /* ==UserStyle==
 @name           Youtube rounded
 @namespace      https://github.com/Adaoh2/youtube-rounded
-@version        1.2.2
+@version        1.2.3
 @description    A more rounded style for Youtube
 @author         Adaoh2
 @updateURL 		https://userstyles.world/api/style/1281.user.css
 @preprocessor   stylus
 
-@var checkbox 	enableTransparency 		"Enable the transparency effects (required for blur)" 			1
-@var range 		blurDensity     		"Change the blur density" 										[20, 0, 30, 5, "px"]
-@var range 		borderRadius 			"Change the radius of the rounded corners" 						[10, 0, 100, 5, "px"]
-@var checkbox 	enableBox				"Enable the box around the thumbnails on the homepage" 			1
+@var checkbox 	enableTransparency 		"Enable the transparency effects (required for blur)" 				1
+@var range 		blurDensity     		"Change the blur density" 											[20, 0, 30, 5, "px"]
+@var range 		borderRadius 			"Change the radius of the rounded corners" 							[10, 0, 100, 5, "px"]
+@var checkbox 	enableBox				"Enable the box around the thumbnails on the homepage" 				1
+@var checkbox 	enableWhiteTopBar		"Enable the white top bar on the immersive player on light mode" 	0
 
 
 ==/UserStyle== */
@@ -146,6 +147,65 @@
 	}
 
 	@media (prefers-color-scheme: light) {
+
+		if enableWhiteTopBar {
+			/* Force top bar to be white, for immersive viewer */
+			#container.ytd-searchbox,
+			#search-icon-legacy.ytd-searchbox {
+				border-right: 1px solid var(--ytd-searchbox-legacy-border-color);
+			}
+			/*
+			#search-icon-legacy.ytd-searchbox {
+				border: 1px solid var(--ytd-searchbox-legacy-button-border-color);
+				background-color: #f8f8f8;
+			}*/
+			/* search box */
+			#container.ytd-searchbox {
+				background-color: white;
+				border-color: #ccc;
+			}
+
+			/* icons */
+			ytd-masthead #guide-icon.ytd-masthead,
+			ytd-masthead ytd-searchbox[system-icons] #search-icon-legacy.ytd-searchbox yt-icon.ytd-searchbox,
+			ytd-masthead yt-icon,
+			ytd-masthead .yt-icon-container.yt-icon {
+				color: #030303;
+			}
+			
+			/* microphone search button */
+			ytd-masthead ytd-button-renderer[is-icon-button][has-no-text] {
+				border-radius: 100%;
+				background-color: #f9f9f9;
+			}
+
+			#container.ytd-searchbox input.ytd-searchbox {
+				color: hsl(0, 0%, 6.7%);
+			}
+
+			/* borders around search box and search box */
+			#container.ytd-searchbox,
+			#search-icon-legacy.ytd-searchbox {
+				border-color: #ccc;
+			}
+
+			/* youtube logo text */
+			yt-icon.ytd-logo {
+				color: #000;
+			}
+
+			/* top bar background*/
+			ytd-masthead {
+				if enableTransparency {
+					background: rgba(255, 255, 255, .9);
+				}
+				else {
+					background: rgb(255, 255, 255);
+				}
+			}
+		}
+
+
 		ytd-video-preview {
 			if enableTransparency {
 				background-color: #e3e3e3cc;
@@ -171,7 +231,6 @@
 
 
 		html {
-
 			if enableTransparency {
 				--yt-spec-brand-background-primary: rgba(255, 255, 255, .9);
 			}
